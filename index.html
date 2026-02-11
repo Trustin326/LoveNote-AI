@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LoveNote AI Deluxe</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Segoe UI, Arial, sans-serif;
+background:linear-gradient(135deg,#ff9ad5,#ffd6f5,#a0e7ff,#ffe29a);
+color:#222;
+}
+
+/* HERO */
+.hero{
+text-align:center;
+padding:120px 20px 60px;
+position:relative;
+overflow:hidden;
+}
+
+/* HANGING CUPID MASCOT */
+.mascot{
+width:180px;
+position:absolute;
+top:-70px;
+left:50%;
+transform:translateX(-50%);
+animation:floaty 4s ease-in-out infinite;
+filter:drop-shadow(0 20px 30px rgba(0,0,0,.35));
+}
+
+@keyframes floaty{
+0%,100%{transform:translateX(-50%) translateY(0);}
+50%{transform:translateX(-50%) translateY(-20px);}
+}
+
+.hero h1{
+font-size:52px;
+color:#ff2e93;
+margin-bottom:14px;
+}
+
+.hero p{
+font-size:20px;
+max-width:650px;
+margin:auto;
+opacity:.9;
+}
+
+/* DEMO CARD */
+.demoCard{
+width:340px;
+height:230px;
+margin:60px auto 20px;
+perspective:1000px;
+cursor:pointer;
+}
+
+.cardInner{
+width:100%;
+height:100%;
+position:relative;
+transform-style:preserve-3d;
+transition:transform 1s;
+}
+
+.cardInner.open{
+transform:rotateY(180deg);
+}
+
+.cardSide{
+position:absolute;
+width:100%;
+height:100%;
+backface-visibility:hidden;
+border-radius:20px;
+box-shadow:0 20px 45px rgba(0,0,0,.25);
+}
+
+.front{
+background:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:24px;
+font-weight:bold;
+color:#ff2e93;
+}
+
+.back{
+background:#fff0fb;
+transform:rotateY(180deg);
+padding:20px;
+text-align:center;
+}
+
+.dancer{
+font-size:70px;
+display:block;
+animation:dance 1s infinite alternate;
+}
+
+@keyframes dance{
+from{transform:rotate(-12deg);}
+to{transform:rotate(12deg);}
+}
+
+/* FEATURES */
+.features{
+max-width:1100px;
+margin:70px auto 20px;
+padding:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.feature{
+background:white;
+padding:28px;
+border-radius:18px;
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+transition:.3s;
+}
+
+.feature:hover{
+transform:translateY(-6px);
+}
+
+/* PRICING */
+.pricing{
+max-width:1100px;
+margin:60px auto 80px;
+padding:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.priceCard{
+background:white;
+padding:35px;
+border-radius:20px;
+box-shadow:0 20px 45px rgba(0,0,0,.2);
+text-align:center;
+transition:.3s;
+}
+
+.priceCard:hover{
+transform:scale(1.03);
+}
+
+.price{
+font-size:42px;
+color:#ff2e93;
+font-weight:bold;
+}
+
+button{
+padding:15px 24px;
+border:none;
+border-radius:14px;
+background:#ff2e93;
+color:white;
+font-weight:bold;
+cursor:pointer;
+margin-top:14px;
+font-size:16px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+
+<!-- DEFAULT CUPID (SO SOMETHING ALWAYS SHOWS) -->
+<img class="mascot"
+src="https://cdn-icons-png.flaticon.com/512/3468/3468377.png">
+
+<h1>💘 LoveNote AI Deluxe</h1>
+
+<p>
+Create viral Valentine messages, memes, animated greeting cards,
+and AI Valentine photo transformations in seconds.
+</p>
+
+</section>
+
+<!-- DEMO CARD -->
+<div class="demoCard" onclick="toggleCard()">
+<div id="card" class="cardInner">
+
+<div class="cardSide front">
+Tap To Open Your Valentine Card 💘
+</div>
+
+<div class="cardSide back">
+<span class="dancer">💃</span>
+<p>You make my heart do backflips 😭💘</p>
+</div>
+
+</div>
+</div>
+
+<!-- FEATURES -->
+<section class="features">
+
+<div class="feature">
+<h3>💬 AI Love Messages</h3>
+<p>Romantic, funny, breakup, engagement and spicy PG-13 relationship modes.</p>
+</div>
+
+<div class="feature">
+<h3>😂 Viral Meme Generator</h3>
+<p>Create social media ready Valentine memes in seconds.</p>
+</div>
+
+<div class="feature">
+<h3>🎁 Animated Greeting Cards</h3>
+<p>Dancing characters, gift reveal messages, and shareable Valentine cards.</p>
+</div>
+
+<div class="feature">
+<h3>📸 Valentine AI Image Transform</h3>
+<p>Turn photos into Cupid themed Valentine characters.</p>
+</div>
+
+</section>
+
+<!-- PRICING -->
+<section class="pricing">
+
+<div class="priceCard">
+<h3>Starter</h3>
+<div class="price">Free</div>
+<p>3 Messages</p>
+<button>Start Free</button>
+</div>
+
+<div class="priceCard">
+<h3>Valentine Bundle</h3>
+<div class="price">$19</div>
+<p>Messages + Memes + Cards</p>
+<button>Get Bundle</button>
+</div>
+
+<div class="priceCard">
+<h3>Pro Romance</h3>
+<div class="price">$27</div>
+<p>All Features + Premium Animations</p>
+<button>Go Pro</button>
+</div>
+
+</section>
+
+<script>
+function toggleCard(){
+document.getElementById("card").classList.toggle("open");
+}
+</script>
+
+</body>
+</html>
