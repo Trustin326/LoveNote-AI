@@ -1,0 +1,38 @@
+
+body{font-family:system-ui;background:#fff;padding:30px}
+.hero{text-align:center}
+.hero-img{width:240px}
+.pricing{margin-top:20px}
+.btn{
+display:inline-block;
+padding:14px 22px;
+border-radius:20px;
+background:linear-gradient(45deg,#ff2f9f,#ff6ac1);
+color:white;
+text-decoration:none;
+margin:10px;
+font-weight:bold
+}
+.btn.black{background:black}
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+margin-top:40px
+}
+.card{
+background:white;
+border-radius:28px;
+padding:20px;
+box-shadow:0 8px 20px rgba(255,0,140,.2)
+}
+.card img{width:140px}
+.card h2{color:#ff2f9f}
+input,select{
+width:100%;
+padding:12px;
+margin:8px 0;
+border-radius:12px;
+border:1px solid #eee
+}
+.dash-title{text-align:center;color:#ff2f9f}

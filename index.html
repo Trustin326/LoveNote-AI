@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>LoveNote AI — Real Payment Locked V2</title>
+<link rel="stylesheet" href="css/styles.css"/>
+<link rel="icon" href="assets/icon-192.png"/>
+</head>
+<body>
+<header class="topbar">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:14px">
+    <div class="brand">
+      <img src="assets/icon-192.png" alt="LoveNote AI"/>
+      <div>
+        <div class="name">LoveNote AI</div>
+        <div class="small">Real payment lock • Supabase entitlements • Viral Valentine tools</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+      <span class="pill">💘 Valentine Mode</span>
+      <a class="btn secondary" href="login.html" style="text-decoration:none">Login</a>
+      <a class="btn" href="#pricing" style="text-decoration:none">Get Access</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <div>
+      <h1>Create Viral Love Content in Seconds.</h1>
+      <p>Messages • Memes • Greeting Cards • Photo Transform — in a cute Cupid UI. <b>V2 uses a REAL database gate</b>: users must have an entitlement row from a verified Stripe payment.</p>
+      <div class="cta">
+        <a class="btn" href="#pricing" style="text-decoration:none">Buy & Unlock</a>
+        <a class="btn secondary" href="login.html" style="text-decoration:none">Login</a>
+        <button class="btn black" onclick="localStorage.setItem('lovenote_owner','true');location.href='dashboard.html'">Owner Mode</button>
+      </div>
+      <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+        <span class="badge">✅ Real paywall</span>
+        <span class="badge">✅ Supabase save</span>
+        <span class="badge">✅ Live previews</span>
+        <span class="badge">✅ Upload + send inside tools</span>
+      </div>
+    </div>
+    <div class="heroCard">
+      <img class="heroImg" src="assets/hero-cupid.png" alt="Cupid Hero"/>
+      <div class="small" style="text-align:center;margin-top:6px">Transparent hero image.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sectionTitle">
+      <h2>Dashboard Tools</h2>
+      <div class="small">Tap a card → opens the tool</div>
+    </div>
+    <div class="grid">
+
+    <div class="pinkCard" style="padding:18px;cursor:pointer" onclick="location.href='dashboard.html#msg'">
+      <div class="pinkGlow"></div><div class="pinkFrame"></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+        <div style="font-weight:1000;color:#ff2f9f;font-size:22px">AI Message Generator</div>
+        <span class="badge">Tap</span>
+      </div>
+      <div style="display:flex;gap:14px;align-items:center">
+        <img src="assets/cupid.png" alt="" style="width:120px;filter:drop-shadow(0 16px 18px rgba(255,47,159,.16))"/>
+        <div style="color:#6b7280;font-weight:800">Recipient + Tone + Send to Phone</div>
+      </div>
+    </div>
+
+
+    <div class="pinkCard" style="padding:18px;cursor:pointer" onclick="location.href='dashboard.html#meme'">
+      <div class="pinkGlow"></div><div class="pinkFrame"></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+        <div style="font-weight:1000;color:#ff2f9f;font-size:22px">Meme Creator</div>
+        <span class="badge">Tap</span>
+      </div>
+      <div style="display:flex;gap:14px;align-items:center">
+        <img src="assets/camera.png" alt="" style="width:120px;filter:drop-shadow(0 16px 18px rgba(255,47,159,.16))"/>
+        <div style="color:#6b7280;font-weight:800">Upload Photo + Text + Download/Send</div>
+      </div>
+    </div>
+
+
+    <div class="pinkCard" style="padding:18px;cursor:pointer" onclick="location.href='dashboard.html#card'">
+      <div class="pinkGlow"></div><div class="pinkFrame"></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+        <div style="font-weight:1000;color:#ff2f9f;font-size:22px">Greeting Card Builder</div>
+        <span class="badge">Tap</span>
+      </div>
+      <div style="display:flex;gap:14px;align-items:center">
+        <img src="assets/artist.png" alt="" style="width:120px;filter:drop-shadow(0 16px 18px rgba(255,47,159,.16))"/>
+        <div style="color:#6b7280;font-weight:800">Live Card Preview + Download + Upsell</div>
+      </div>
+    </div>
+
+
+    <div class="pinkCard" style="padding:18px;cursor:pointer" onclick="location.href='dashboard.html#transform'">
+      <div class="pinkGlow"></div><div class="pinkFrame"></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+        <div style="font-weight:1000;color:#ff2f9f;font-size:22px">Photo Transform</div>
+        <span class="badge">Tap</span>
+      </div>
+      <div style="display:flex;gap:14px;align-items:center">
+        <img src="assets/dj.png" alt="" style="width:120px;filter:drop-shadow(0 16px 18px rgba(255,47,159,.16))"/>
+        <div style="color:#6b7280;font-weight:800">Upload + Filters + Download/Send</div>
+      </div>
+    </div>
+
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="sectionTitle">
+      <h2>Pricing</h2>
+      <div class="small">These buttons start Stripe Checkout (Netlify Function required).</div>
+    </div>
+
+    <div class="pricing">
+      <div class="priceCard">
+        <h3>Starter</h3>
+        <div class="price">$7</div>
+        <ul class="list"><li>AI Messages</li><li>Meme Creator</li><li>Basic exports</li></ul>
+        <button class="btn" style="width:100%" onclick="startCheckout('starter')">Buy Starter</button>
+      </div>
+
+      <div class="priceCard">
+        <h3>Creator</h3>
+        <div class="price">$19</div>
+        <ul class="list"><li>All 4 tools</li><li>Greeting card downloads</li><li>SMS/share helpers</li></ul>
+        <button class="btn black" style="width:100%" onclick="startCheckout('creator')">Buy Creator</button>
+      </div>
+
+      <div class="priceCard">
+        <h3>Deluxe</h3>
+        <div class="price">$39</div>
+        <ul class="list"><li>All tools + Upsell</li><li>Dancing card preview</li><li>Extra templates</li></ul>
+        <button class="btn" style="width:100%" onclick="startCheckout('deluxe')">Buy Deluxe</button>
+      </div>
+    </div>
+
+    <div class="heroCard">
+      <div class="small"><b>Important:</b> Stripe verification is server-side. This repo includes Netlify Functions you can deploy in 2 minutes on Netlify. After payment, users land on <code>success.html</code> → verified → entitlement stored in Supabase.</div>
+    </div>
+  </section>
+</main>
+
+<div id="toast" class="toast"></div>
+<script src="js/app.js"></script>
+<script src="js/billing.js"></script>
+</body>
+</html>

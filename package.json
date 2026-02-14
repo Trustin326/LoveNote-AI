@@ -1,0 +1,8 @@
+{
+  "name": "lovenote-ai-v2",
+  "private": true,
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.0",
+    "stripe": "^16.1.0"
+  }
+}
